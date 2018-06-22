@@ -26,4 +26,12 @@ const createSportstar = function (form) {
   sportstar.appendChild(sport);
   const age = buildElement('h3', form.age.value);
   sportstar.appendChild(age);
+
+  return sportstar;
+}
+
+const buildElement = function (tag, value) {
+  const element = document.createElement(tag);
+  element.textContext = value;
+  return element;
 }
