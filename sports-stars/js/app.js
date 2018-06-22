@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const newSportstarForm = document.querySelector('#new-sportsman-form');
+  const newSportstarForm = document.querySelector('#new-sportstar-form');
   newSportstarForm.addEventListener('submit', handleNewSportstarFormSubmit);
 
 })
@@ -7,31 +7,32 @@ document.addEventListener('DOMContentLoaded', () => {
 const handleNewSportstarFormSubmit = function (event) {
   event.preventDefault();
 
-const sportstar = createSportstar(event.target);
-const sportstarList = document.querySelector('#sportstar-list');
-sportstarList.appendChild(sportstar);
+  const sportstar = createSportstar(event.target);
+  const sportstarList = document.querySelector('#sportstar-list');
+  sportstarList.appendChild(sportstar);
 
-event.target.reset();
+  event.target.reset();
 }
 
 const createSportstar = function (form) {
-  const sportstar = document.createElement('li');
+  const sportstar = document.createElement('ul');
   sportstar.classList.add('sportstar');
 
-  const firstName = buildElement('h2', form.first-name.value);
+  const firstName = buildElement('li', form.first_name.value);
   sportstar.appendChild(firstName);
-  const lastName = buildElement('h3', form.last-name.value);
+  const lastName = buildElement('li', form.last_name.value);
   sportstar.appendChild(lastName);
-  const sport = buildElement('h3', form.sport.value);
+  const sport = buildElement('li', form.sport.value);
   sportstar.appendChild(sport);
-  const age = buildElement('h3', form.age.value);
+  const age = buildElement('li', form.age.value);
   sportstar.appendChild(age);
+  console.log(age);
 
   return sportstar;
 }
 
 const buildElement = function (tag, value) {
   const element = document.createElement(tag);
-  element.textContext = value;
+  element.appendChild(document.createTextNode(value));
   return element;
 }
