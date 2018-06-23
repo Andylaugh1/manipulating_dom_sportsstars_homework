@@ -1,5 +1,5 @@
 body {
-  font-family: Palatino;
+  font-family: Roboto;
 }
 
 #form-wrapper {
@@ -12,6 +12,14 @@ body {
   margin-right: 1.8rem;
 }
 
+input {
+  border: solid black 2px;
+}
+
+select {
+  border: solid black 2px;
+}
+
 label.primary {
   display: block;
   margin: 0.4em 0;
@@ -21,20 +29,29 @@ label::after {
   content: ":";
 }
 
-button, input[type="submit"] {
+input[type="submit"] {
   margin-top: 1rem;
+  background-color: green;
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
-#reading-list {
+button {
+  background-color: red;
+  border: solid black 2px;
+  padding: 5px;
+}
+
+#sportstar-list {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
 }
 
-.reading-list-item {
+.sportstar {
   margin: 0.5rem 0.5rem;
   padding: 0.5rem 0.8rem;
   border: 1px solid #20437c;
   border-radius: 5%;
-  background: #ddeaff;
+  background: green;
 }

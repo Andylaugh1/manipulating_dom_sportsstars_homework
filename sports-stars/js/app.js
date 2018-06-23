@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const newSportstarForm = document.querySelector('#new-sportstar-form');
   newSportstarForm.addEventListener('submit', handleNewSportstarFormSubmit);
 
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteClick);
+
 })
 
 const handleNewSportstarFormSubmit = function (event) {
@@ -35,4 +38,9 @@ const buildElement = function (tag, value) {
   const element = document.createElement(tag);
   element.appendChild(document.createTextNode(value));
   return element;
+}
+
+const handleDeleteClick = function (event) {
+  const sportstarList = document.querySelector('#sportstar-list');
+  sportstarList.innerHTML = '';
 }
