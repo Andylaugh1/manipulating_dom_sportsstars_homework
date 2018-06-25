@@ -2,11 +2,11 @@ body {
   font-family: Roboto;
 }
 
-#form-wrapper {
+/* #form-wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
-}
+} */
 
 .form-item {
   margin-right: 1.8rem;
@@ -32,14 +32,14 @@ label::after {
 input[type="submit"] {
   margin-top: 1rem;
   background-color: green;
-  padding: 5px;
+  padding: 15px;
   margin-bottom: 10px;
 }
 
 button {
   background-color: red;
   border: solid black 2px;
-  padding: 5px;
+  padding: 15px;
 }
 
 #sportstar-list {
@@ -49,8 +49,7 @@ button {
 }
 
 .sportstar {
-  margin: 0.5rem 0.5rem;
-  padding: 0.5rem 0.8rem;
+  margin: 0.5rem;
   border: 1px solid #20437c;
   border-radius: 5%;
   background: green;

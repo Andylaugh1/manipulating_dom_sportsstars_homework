@@ -21,15 +21,16 @@ const createSportstar = function (form) {
   const sportstar = document.createElement('ul');
   sportstar.classList.add('sportstar');
 
-  const firstName = buildElement('li', form.first_name.value);
+  const firstName = buildElement('li', 'First Name: ' + form.first_name.value);
   sportstar.appendChild(firstName);
-  const lastName = buildElement('li', form.last_name.value);
+  const lastName = buildElement('li', 'Last Name: ' + form.last_name.value);
   sportstar.appendChild(lastName);
-  const sport = buildElement('li', form.sport.value);
+  const sport = buildElement('li', 'Sport: ' + form.sport.value);
   sportstar.appendChild(sport);
-  const age = buildElement('li', form.age.value);
+  const age = buildElement('li', 'Age: ' + form.age.value);
   sportstar.appendChild(age);
-  console.log(age);
+  const career = buildElement('li', 'Career Phase: ' + form.career.value);
+  sportstar.appendChild(career);
 
   return sportstar;
 }
